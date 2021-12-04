@@ -40,13 +40,13 @@ export default function App() {
 
     //check if player wins
     if (userChoice.beats === computerChoice.id) {
-      setWins(wins + 1);
-      setGameState("win");
+      setLosses(losses + 1);
+      setGameState("loss");
     } else if (userChoice.id === computerChoice.id) {
       setGameState("draw");
     } else {
-      setLosses(losses + 1);
-      setGameState("loss");
+      setWins(wins + 1);
+      setGameState("win");
     }
   }
 
